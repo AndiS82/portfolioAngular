@@ -1,0 +1,153 @@
+/* #navbarContainer {
+  width: 40vw;
+  max-height: 2.5vh;
+  display: table;
+  vertical-align: middle;
+}
+
+.navHeadlineDark {
+  color: #dddddd;
+  cursor: pointer;
+  padding: 1%;
+  height: 1.5em;
+  border-bottom: 1px solid transparent;
+}
+
+.navHeadlineLight {
+  color: #222831;
+  cursor: pointer;
+  padding: 1%;
+  height: 1.5em;
+  border-bottom: 1px solid transparent;
+}
+
+.navHeadlineDark:hover {
+  color: #f05454;
+  border-bottom: 1px solid #f05454;
+}
+
+.navHeadlineLight:hover {
+  color: #f05454;
+  border-bottom: 1px solid #f05454;
+}
+
+.activeLight {
+  color: #f05454;
+  border-bottom: 1px solid #f05454;
+}
+
+.activeDark {
+  color: #1a1a1a;
+  border-bottom: 1px solid #f05454;
+}
+
+.navItem {
+  border-bottom: 1px solid transparent;
+}
+
+.buttonContainer {
+  padding: 1%;
+  height: 3.5em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+}
+
+.buttonContainer:hover {
+  color: blue;
+}
+
+.contactButton {
+  color: #dddddd;
+  background-color: #f05454;
+}
+
+.contactButton:hover {
+  background-color: #30475e;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  height: 1em;
+  width: 50vw;
+}
+
+.nav-list {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 1%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  width: 5vw;
+  text-align: center;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item a:hover {
+  color: #f05454;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 5em;
+  padding: 0.5em 1em;
+  background-color: #f05454;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  margin-right: 1em;
+  min-width: 10vw;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #30475e;
+}
+
+.icon-with-text {
+  display: flex;
+  align-items: center;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+
+.icon-with-text:hover {
+  color: #f05454;
+}
+
+.icon-with-text span {
+  width: 2em;
+}
+
+.material-icons {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.material-icons:hover {
+  color: #f05454;
+}

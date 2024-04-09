@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/* Light Theme */
+.light-theme {
+  background-color: #dddddd;
+  color: #222831;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #222831;
+  color: #dddddd;
+}

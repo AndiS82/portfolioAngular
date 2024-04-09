@@ -1,1 +1,135 @@
-<p>navbar works!</p>
+<section>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li
+        class="nav-item"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a>Home</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a>{{ lang.about }}</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLink="/skills"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a>Skills</a>
+      </li>
+      <li
+        class="nav-item"
+        routerLink="/projects"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a>{{ lang.projects }}</a>
+      </li>
+    </ul>
+    <div class="nav-controls">
+      <button class="btn">{{ lang.contact }}</button>
+      <div class="icon-with-text" (click)="chooseLanguage()">
+        <mat-icon class="material-icons" fontIcon="language"></mat-icon>
+        <span>{{ language }}</span>
+      </div>
+      <mat-icon (click)="toggleMode()" fontIcon="{{ modeIcon }}"
+        >icon2</mat-icon
+      >
+    </div>
+  </nav>
+</section>
+
+<!-- <div id="navbarContainer">
+  <div class="navHeadline">
+    <a
+      style="text-decoration: none"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><h3
+        [ngClass]="
+          themeService.darkMode ? 'navHeadlineDark' : 'navHeadlineLight'
+        "
+      >
+        Home
+      </h3></a
+    >
+  </div>
+  <div>
+    <a
+      style="text-decoration: none"
+      routerLink="/about"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><h3
+        [ngClass]="
+          themeService.darkMode ? 'navHeadlineDark' : 'navHeadlineLight'
+        "
+      >
+        About
+      </h3></a
+    >
+  </div>
+  <div>
+    <a
+      style="text-decoration: none"
+      routerLink="/skills"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><h3
+        [ngClass]="
+          themeService.darkMode ? 'navHeadlineDark' : 'navHeadlineLight'
+        "
+      >
+        Skills
+      </h3></a
+    >
+  </div>
+  <div>
+    <a
+      style="text-decoration: none"
+      [routerLink]="['/projects']"
+      [routerLinkActive]="themeService.darkMode ? 'activeDark' : 'activeLight'"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><h3
+        [ngClass]="
+          themeService.darkMode ? 'navHeadlineDark' : 'navHeadlineLight'
+        "
+      >
+        Projects
+      </h3></a
+    >
+  </div>
+  <div>
+    <button mat-flat-button class="contactButton">Contact</button>
+  </div>
+  <div class="buttonContainer" (click)="chooseLanguage()">
+    <mat-icon
+      [ngClass]="themeService.darkMode ? 'dark-theme' : 'light-theme'"
+      aria-hidden="false"
+      aria-label="globe"
+      fontIcon="language"
+    ></mat-icon>
+    <h3
+      [ngClass]="themeService.darkMode ? 'dark-theme' : 'light-theme'"
+      style="margin-left: 0.5vw"
+    >
+      {{ language }}
+    </h3>
+  </div>
+  <div class="buttonContainer">
+    <mat-icon
+      [ngClass]="themeService.darkMode ? 'dark-theme' : 'light-theme'"
+      (click)="toggleMode()"
+      fontIcon="{{ modeIcon }}"
+    ></mat-icon>
+  </div>
+</div> -->
