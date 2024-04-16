@@ -1,11 +1,44 @@
 <div>
-  <h1 id="homeHeadline">{{ lang.greeting }}</h1>
-  <div id="homeContainer">
-    <div class="textContainer">
-      <p>Lorem ipsum</p>
+  <!-- <h1 id="homeHeadline">{{ lang.greeting }}</h1> -->
+  <!-- <div id="homeContainer">
+    <div class="infoBox"></div>
+    <div class="infoBox"></div>
+  </div> -->
+  <section class="hero container">
+    <div class="hero-text">
+      <div>
+        <h1><small>Hi I'm </small>Andreas S.</h1>
+        <p>Lorem impsum <span>Lorem ipsum</span></p>
+        <div class="callToAction">
+          <a href="#" class="button"> {{ lang.contact }}</a>
+        </div>
+        <div class="socialMedia">
+          <a href="#"
+            ><img
+              src="../../../assets/img/github-original.svg"
+              width="48px"
+              alt="GitHub"
+          /></a>
+          <a href="#"
+            ><img
+              src="../../../assets/img/linkedin-original.svg"
+              width="48px"
+              alt="GitHub"
+          /></a>
+          <a href="#"
+            ><img
+              src="../../../assets/img/twitter-original.svg"
+              width="48px"
+              alt="GitHub"
+          /></a>
+        </div>
+      </div>
     </div>
-    <div class="imgContainer">
-      <img src="../../../assets/img/hello.png" />
+    <div class="hero-img">
+      <img src="../../../assets/img/hello.png" alt="Me" width="100%" />
     </div>
-  </div>
+  </section>
+  <section>
+    <app-skills></app-skills>
+  </section>
 </div>

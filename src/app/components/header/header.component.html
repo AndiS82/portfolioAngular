@@ -1,4 +1,73 @@
-<div id="container">
-  <h1>Cable Salad's Portfolio</h1>
-  <app-navbar></app-navbar>
-</div>
+<header>
+  <div class="logoContainer">
+    <div class="imageContainer">
+      <img [src]="imageURL" />
+    </div>
+    <h1>MyPortfolio</h1>
+  </div>
+  <section>
+    <nav class="navbar">
+      <ul id="nav-list" [class.menuActive]="menuActive">
+        <li
+          class="nav-item"
+          (click)="toggleMenu()"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="link">Home</a>
+        </li>
+        <li
+          class="nav-item"
+          (click)="toggleMenu()"
+          routerLink="/about"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="link">{{ lang.about }}</a>
+        </li>
+        <li
+          class="nav-item"
+          (click)="toggleMenu()"
+          routerLink="/skills"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="link">Skills</a>
+        </li>
+        <li
+          class="nav-item"
+          (click)="toggleMenu()"
+          routerLink="/projects"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="link">{{ lang.projects }}</a>
+        </li>
+        <li
+          class="nav-item"
+          routerLink="/contact"
+          routerLinkActive="active"
+          (click)="contact()"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="link">{{ lang.contact }}</a>
+        </li>
+        <li (click)="chooseLanguage()" class="nav-item">
+          <a class="iconLink">
+            <mat-icon fontIcon="language"></mat-icon>{{ language }}</a
+          >
+        </li>
+        <li (click)="toggleMode()" class="nav-item">
+          <a class="iconLink">
+            <mat-icon fontIcon="{{ modeIcon }}"></mat-icon>
+            {{ modeIcon === "light_mode" ? "Light" : "Dark" }}
+          </a>
+        </li>
+      </ul>
+      <div (click)="toggleMenu()" class="mobileMenu">
+        <mat-icon class="material-icons" fontIcon="menu"></mat-icon>
+      </div>
+    </nav>
+  </section>
+</header>

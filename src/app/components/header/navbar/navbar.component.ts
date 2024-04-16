@@ -4,6 +4,7 @@ import { ThemeService } from 'src/app/services/theme-service/theme.service';
 
 import DE from '../../../../assets/lang/DE.json';
 import EN from '../../../../assets/lang/EN.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,11 +16,18 @@ export class NavbarComponent {
   lang = DE;
   darkMode = false;
   modeIcon = 'light_mode';
+  menuActive = false;
 
   constructor(
     private languageService: LanguageService,
+    private router: Router,
     public themeService: ThemeService
   ) {}
+
+  contact() {
+    this.router.navigate(['/contact']);
+    this.toggleMenu();
+  }
 
   chooseLanguage() {
     this.language = this.language === 'DE' ? 'EN' : 'DE';
@@ -30,5 +38,9 @@ export class NavbarComponent {
   toggleMode() {
     this.themeService.toggleDarkMode();
     this.modeIcon = this.modeIcon === 'light_mode' ? 'dark_mode' : 'light_mode';
+  }
+
+  toggleMenu() {
+    this.menuActive = !this.menuActive;
   }
 }
