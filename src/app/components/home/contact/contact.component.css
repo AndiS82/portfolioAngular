@@ -1,3 +1,18 @@
 form {
   padding: 20px;
 }
+
+.form-table {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
